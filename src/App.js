@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { AuthProvider } from "./context/AuthContext";
+import AdminDashboard from "./pages/dashboard/AdminDashboard.jsx"
+import Login from "./pages/Login";
+import Sidebar from "./sidebar/Sidebar.js";
+import GenerateReports from "./pages/GenerateReports.jsx";
 
-function App() {
+// function Dashboard() {
+//   return <h1 className="text-2xl text-center mt-10">Welcome to AmazeCare Dashboard!</h1>;
+// }
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<AdminDashboard />} />
+          <Route path="/generateReports" element={<GenerateReports />} />
+        </Routes>
+      </BrowserRouter>
+    // </AuthProvider>
+  //  <div  className="">
+  //     {/* <Login /> */}
+  //     {/* <Sidebar /> */}
+  //     <AdminDashboard />
+  //  </div> 
   );
 }
-
-export default App;
