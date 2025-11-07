@@ -7,6 +7,7 @@ import GenerateReports from "./pages/GenerateReports.jsx";
 import AdminPatientDashBoard from "./pages/dashboard/AdminPatientDashBoard.jsx";
 import AdminDoctorDashboard from "./pages/dashboard/AdminDoctorDashboard.jsx";
 import Appointments from "./pages/Appointments.jsx";
+import AppointmentDashboard from "./pages/dashboard/AppointmentDashBoard.jsx";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
           <Route path="/generateReports" element={<GenerateReports />} />
           <Route path="/admin/patients" element={<AdminPatientDashBoard />} />
           <Route path="/admin/doctors" element={<AdminDoctorDashboard/>}/>
-          <Route path="/appointments" element={<Appointments />}/>
+          <Route path="/appointments" element={<AppointmentDashboard />}/>
         </Routes>
       </BrowserRouter>
     // </AuthProvider>
