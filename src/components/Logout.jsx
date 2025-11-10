@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router'
-import Button from '../components/Button' // adjust import path if needed
+import Button from '../components/Button' 
 import React from 'react'
 
 function LogoutButton() {
@@ -8,7 +8,7 @@ function LogoutButton() {
   function handleLogout() {
     localStorage.removeItem('token')
     sessionStorage.clear()
-    navigate('/login', { replace: true })
+    navigate('/', { replace: true })
   }
 
   return (

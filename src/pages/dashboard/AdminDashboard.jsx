@@ -10,11 +10,11 @@ function AdminDashboard() {
       <div className='text-4xl border border-3 p-4 box-border shadow-md shadow-orange-600'>ADMIN DASHBORAD</div>
         <div className=' gap-2 border border-slate-50 rounded p-16 m-8 shadow-md shadow-purple-600'>
           <div className='text-black flex gap-2 pb-4'>
-            <Button text={"Manage Patients"} onclick={()=>{}} /> 
-            <Button text={"Manage Doctors"}/>
+            <Button text={"Manage Patients"} onclick={()=>{nav("/admin/patients")}} /> 
+            <Button text={"Manage Doctors"} onclick={()=>{nav("/admin/doctors")}}/>
           </div>
           <div className='text-black flex gap-2'>
-            <Button text={"Manage Appointments"} />
+            <Button text={"Manage Appointments"} onclick={()=>{nav("/appointments")}}/>
             <Button text={"Generate Reports"} onclick={()=>{nav("/generateReports")}}/>
           </div>
         
